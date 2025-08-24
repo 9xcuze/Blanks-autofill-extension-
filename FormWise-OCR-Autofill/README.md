@@ -1,4 +1,4 @@
-# FormWise OCR Autofill
+# FormWise OCR Autofill Version 1.01
 
 A modern, open-source Chrome Extension that scans web forms, extracts data from user-uploaded documents via OCR, and generates robust autofill suggestions. It comes with:
 - **Chrome Extension (MV3)** using React + TypeScript + Tailwind for a clean, trustworthy UI.
