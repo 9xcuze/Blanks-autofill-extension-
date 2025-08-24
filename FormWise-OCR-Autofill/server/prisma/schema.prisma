@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["mongoDb"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_URL")
+}
+
+model Template {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  host      String
+  name      String
+  fields    Json
+  createdAt DateTime @default(now())
+}
+
+model Mapping {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String
+  host      String
+  map       Json
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String
+  action    String
+  meta      Json
+  createdAt DateTime @default(now())
+}

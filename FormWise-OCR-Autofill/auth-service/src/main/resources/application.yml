@@ -1,0 +1,11 @@
+server:
+  port: 8080
+app:
+  jwt:
+    accessMinutes: 15
+    refreshDays: 7
+    privateKey: classpath:keys/private.pem
+    publicKey: classpath:keys/public.pem
+spring:
+  main:
+    allow-bean-definition-overriding: true
